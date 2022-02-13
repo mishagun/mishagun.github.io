@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <ul class="header">
+        <li><a href="main.html">MAIN</a></li>
+        <li><a href="main.html#about">ABOUT</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="rules.html">RULES</a></li>
+        <li><a href="championship.html">CHAMPIONSHIP</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        <li><a href="#contacts">CONTACT US</a></li>
+        <li><a class="active" style="color:blueviolet" href="rules_with_xml.html">XML</a></li>
+        <li><a style="color:blueviolet"  href="js_task.html">JS</a></li>
+        <li style="float:right"><a href="main_hebrew.html">HE</a></li>
+    </ul>
+
+    <div class="bg-gray" style="margin-top: 58px;"> <!-- added margin-top there to start after header -->
+        <div class="fieldbox" style="width:fit-content; padding-top: 40px;">
+            <iframe  width=640 height=800 src="rules_xml_description.xml"></iframe>
+        </div>
+
+        <!-- page footer -->
+        <div class="bg-black" id="contacts">
+            <footer class="footer">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/mikhail-feldman/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/donmishgun/">Instagram</a></li>
+                    <li><a href="mailto:mail@google.com">Email</a></li>
+                    <li><a href="https://www.biu.ac.il/en">Bar-Ilan University</a></li>
+                    <li><a href="https://www.google.com/search?q=what+is+the+game+of+squash">What Google thinks?</a>
+                  </ul>
+            </footer>
+        </div>
+    <script>
+        function show_hidden()
+        {
+            document.querySelector("#loaded_video").style.display = 'block'; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.chatlog {
+    display: none;
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    background-color: rgb(212, 199, 199);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    overflow:scroll;
+
+}
+.chatlog p{
+    color: #8492A6;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.chatlog a {
+    color: #5074a7;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.timestampbox{
+    vertical-align:middle;
+}
+.messageicon img{
+    vertical-align:middle;
+
+}
+.messageicon {
+    width: 20px;
+    height: 20px;
+    fill: none;
+}
+
+.chatmessage p{
+    background-color: #e7e6e8;  
+    border-radius: 3px;
+    padding:15px
+}
+
+.timestampbox p{
+    background-color: transparent;
+}
+
+
+.form1 button {
+    width:100%;
+    background-color: #7AB5B6;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    color: white;
+    padding:  20px;
+    margin-bottom:40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.form1 button:hover{
+    background-color: #619293;
+}
+
+
+.timestampbox p, img{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,36 @@
+/* CREATE MENU BAR ON TOP */
+ul.header {
+    z-index: 4000;
+    list-style-type: none;
+    position: fixed;
+    width:1200px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: rgb(212, 199, 199);
+    opacity: 100%;
+    letter-spacing: 1.5px;
+  }
+  
+  ul.header li {
+    float: left;
+  }
+  
+  ul.header li a {
+    display: block;
+    color: rgba(0, 0, 0, 0.66);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+  }
+  
+  /* define color for active button and hover button */
+  ul.header li a.active {
+    background-color: #7AB5B6;
+    color: white;
+  }
+  
+  ul.header li a:hover:not(.active) {
+    background-color: #9FA1BD;
+  }

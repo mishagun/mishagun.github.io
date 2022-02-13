@@ -1,0 +1,249 @@
+body {
+  width: 1200px;
+  margin:auto;
+  font-family: Helvetica;
+}
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* LANDING IMAGE */
+
+/* in order to blur image without glowing edges I had to enlarge it, 
+so i put it in a box */
+/* create box to fit landing image in it */
+div.landing_image_box {
+  height: 700px;
+  width: 1200px;
+  overflow: hidden;
+}
+
+.landing_image {
+  background-image: url("../media/main_cover_image.jpeg");
+  /* blur the image */
+  filter: blur(8px) grayscale(40%);
+  /* move it on top to be with the menu */
+  margin-top: -20px;
+  /* Full height */
+  height: 1000px; 
+  /* center and scale the image */
+  background-position: center;
+  transform: scale(1.1);
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.landing_text {
+  letter-spacing: 0.5em;
+  font-size:40px;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  -webkit-text-stroke-width: 0.2px; /* add contour to text */
+  -webkit-text-stroke-color: black;
+  color: #7ab5b6dd;
+  font-weight: bold;
+}
+
+
+/* GENERIC CONTENT FOR ALL PAGES */
+
+h2.heading_title {
+  font-family: "Montserrat", sans-serif;
+  color: #58546a;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-transform: none;
+  }
+
+.heading_date {
+  font-family: "Montserrat", sans-serif;
+  color: #58546a;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-transform: none;
+}
+
+h3.heading_title {
+  font-family: "Montserrat", sans-serif;
+  color: #58546a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  text-transform: none;
+  position: relative;
+  }
+
+
+/* define style for boxes and their content to use throughout all the project*/
+div.fieldbox {
+    height:100%;
+    width: 1000px;
+    /* padding-top: 40px; */
+    margin: auto;
+    overflow: hidden;
+  } 
+.fieldbox p {
+    padding-top: 15px;
+    color: #8492A6;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.fieldbox p.longtext{ 
+  padding-top: 0px;
+}
+.fieldbox ul, .fieldbox ol{
+  color: #8492A6;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  margin:1em;
+}
+.fieldbox ul li{
+  list-style-type: circle;
+}
+
+
+/* define style for table located within a fieldbox */
+
+.fieldbox table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  /* text-align: center; */
+}
+.fieldbox table{
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.fieldbox th{
+  text-align:center;
+  background-color: #7AB5B6;
+}
+
+.fieldbox tr:nth-child(2), td:first-child{
+  font-weight: bold;
+}
+
+.fieldbox td {
+  text-align: left;
+}
+
+/*not hover first two rows*/
+.fieldbox tr:not(:nth-child(-n+2)):hover {
+  background-color: #9FA1BD;
+}
+
+
+.finals_table td:nth-child(-n+2){ /*for first two elements*/
+  width:15%;
+}
+.finals_table td:last-child{
+  width:10%;
+}
+
+.finals_table tr:not(:nth-child(2)) td:first-child{
+  font-weight: normal;
+}
+
+
+/* for field with greyish background */
+div.bg-gray {
+  background-color: #e7e6e8;
+}
+/* for field with almost black background */
+div.bg-black {
+  background-color: #1f1e1f;
+}
+
+
+
+/* create two equal column layout to use throughout all the project */
+.two_column_equal {
+  height: 500px;
+  float: left;
+  width: 50%;
+  padding: 15px;
+  position: relative;  /* for aligning image vertically afterwards */
+}
+.two_column_box{
+  height: auto;
+  display: flex; /* use it only to make vertical line fit content of its parent */
+}
+/* to change layout back to normal after twocolumn field */
+.two_column_box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.two_column_box img.align_to_center{
+  align-items: center;    /* for aligning content in the center of the page*/
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.two_column_box img.align_with_text{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  margin: 20px 20px 0px 10px;
+  display:inline;
+}
+
+
+/* create left small column */
+.left_small_column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+
+}
+
+/* create right big column */
+.right_big_column {
+  float: left;
+  width: 74.9%;
+  padding: 15px;
+}
+
+/* create vertical separation line*/
+.vertical-row {
+  /* float:left; */
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 0.1%; 
+  background-color: #58546a70;
+ } 
+
+
+
+
+
+
+

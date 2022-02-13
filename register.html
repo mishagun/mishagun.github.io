@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="windows-1255">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+    <body>
+        <ul class="header">
+            <li><a href="main.html">MAIN</a></li>
+            <li><a href="main.html#about">ABOUT</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="rules.html">RULES</a></li>
+            <li><a href="championship.html">CHAMPIONSHIP</a></li>
+            <li><a class="active" href="register.html">REGISTER</a></li>
+            <li><a href="#contacts">CONTACT US</a></li>
+            <li><a style="color:blueviolet"  href="rules_with_xml.html">XML</a></li>
+            <li><a style="color:blueviolet"  href="js_task.html">JS</a></li>
+            <li style="float:right"><a href="js_task.html">HE</a></li>
+        </ul>
+    
+        <div class="bg-gray" style="margin-top: 58px;"> <!-- added margin-top there to start after header -->
+            <div class="fieldbox">
+                <h2 class="heading_title" style="text-align:center;">Registration Form</h2>
+                <p style="text-align: center;">Here you can register to become a member of our club</p>
+                <hr style="margin: 25px; color:#58546a70;">
+            </div>
+            <div class="fieldbox">
+                <form id="main_form" action="http://jkorpela.fi/cgi-bin/echo.cgi" class="form1" method="GET"> 
+                    <label for=fname>First Name: </label> 
+                    <input type="text" name=fname id=fname maxlength="35" title="e.g. John" placeholder="e.g. John" required /> <br>                    
+                    <label for=lname>Last Name: </label> 
+                    <input type="text" name=lname id=lname maxlength="45" title="e.g. Smith" placeholder="e.g. Smith" required /> 
+                    <label for=email>Email: </label>
+                    <input type="email" name=email id=email placeholder="email@gmail.com"> 
+                    <label for=phone>Mobile Phone: </label>
+                    <input type="number" name=phone id=phone placeholder="ex. 050-111-1111"> 
+                    <label for=birthdate>Date of Birth: </label>
+                    <input type="date" name=birthdate id=birthdate title="Date of Birth"> 
+                    <br>
+                    <label for=region_select>Region: </label>
+                    <select id=region_select name=region >
+                        <option value="" > </option>
+                        <option value="Center">Center</option>
+                        <option value="South">South</option>
+                        <option value="North">North</option>
+                        <option value="Jerusalem">Jerusalem</option>
+                    </select>    
+                    <br>
+                    <p style="padding-top:0px; margin-bottom:0px;">Experience level:</p>
+                    <div class="radiocheckbox" id=exp_level_div style="border:20px;">
+                        <input type="radio" name=exp_level id=exp_level0 value=0> 
+                        <label for="exp_level0">Total Beginner. <i>Never played before, but want to try</i></label>
+                        <br>
+                        <input type="radio" name=exp_level id=exp_level1 value=1>
+                        <label for="exp_level1">Amateur. <i>Played several times</i></label> 
+                        <br>
+                        <input type="radio" name=exp_level id=exp_level2 value=2> 
+                        <label for="exp_level2">Some experience.<i>Play more than for a year</i></label> 
+                        <br>
+                        <input type="radio" name=exp_level id=exp_level3 value=3> 
+                        <label for="exp_level3">Experienced player.<i> 2 - 4 years of experience</i></label> 
+                        <br>
+                        <input type="radio" name=exp_level id=exp_level4 value=4> 
+                        <label for="exp_level4">Pro. <i>Play on a regular basis for many years</i> </label> 
+                        <br>
+                    </div>
+                    <p style="padding:0px; margin-bottom:0px;">I would like to:</p>
+                    <div class="radiocheckbox" id="regmail_div">
+                        <input type="checkbox" name='regmail' id=regmail_events value="events">
+                        <label for="regmail_events">Receive information about upcomming events.</label> <br>
+                        <input type="checkbox" name='regmail' id=regmail_news value="news">
+                        <label for="regmail_news">Receive news from the world of squash.</label> <br>
+                        <input type="checkbox" name='regmail' id=regmail_partners value="partners">
+                        <label for="regmail_partners">Find partners to play squash with.</label> <br>
+                        <input type="checkbox" name='regmail' id=regmail_adds value="adds">
+                        <label for="regmail_adds">Buy adds on your website.</label> <br>
+                        <input type="checkbox" name='regmail' id=regmail_joinclub value="club">
+                        <label for="regmail_joinclub">Join the club, participate in upcoming events.</label> <br>
+                    </div>
+                    <label for="addmessage">Additional message:</label>
+                    <textarea id=addmessage name="addmessage" placeholder="Type your message here"></textarea>
+                    <input type=submit value="SUBMIT" id="submit_main_form" />
+                </form>
+            </div>
+        <!-- page footer -->
+        <div class="bg-black" id="contacts">
+            <footer class="footer">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/mikhail-feldman/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/donmishgun/">Instagram</a></li>
+                    <li><a href="mailto:mail@google.com">Email</a></li>
+                    <li><a href="https://www.biu.ac.il/en">Bar-Ilan University</a></li>
+                    <li><a href="https://www.google.com/search?q=what+is+the+game+of+squash">What Google thinks?</a>
+                  </ul>
+            </footer>
+        </div>
+        <script src="js/formscript.js"></script>
+    </body>
+</html>
