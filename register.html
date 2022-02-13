@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="windows-1255">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register form</title>
@@ -13,8 +13,8 @@
 
     <body>
         <ul class="header">
-            <li><a href="main.html">MAIN</a></li>
-            <li><a href="main.html#about">ABOUT</a></li>
+            <li><a href="index.html">MAIN</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
             <li><a href="news.html">NEWS</a></li>
             <li><a href="rules.html">RULES</a></li>
             <li><a href="championship.html">CHAMPIONSHIP</a></li>
@@ -46,7 +46,7 @@
                     <br>
                     <label for=region_select>Region: </label>
                     <select id=region_select name=region >
-                        <option value="" > </option>
+                        <option value="&nbsp;">	&nbsp;</option>
                         <option value="Center">Center</option>
                         <option value="South">South</option>
                         <option value="North">North</option>
@@ -89,6 +89,7 @@
                     <input type=submit value="SUBMIT" id="submit_main_form" />
                 </form>
             </div>
+        </div>
         <!-- page footer -->
         <div class="bg-black" id="contacts">
             <footer class="footer">
