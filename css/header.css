@@ -3,7 +3,7 @@ ul.header {
     z-index: 4000;
     list-style-type: none;
     position: fixed;
-    width:1200px;
+    width:100%;
     margin: 0;
     padding: 0;
     top: 0;
