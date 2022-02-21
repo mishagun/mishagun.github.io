@@ -1,36 +1,108 @@
 /* CREATE MENU BAR ON TOP */
 ul.header {
-    z-index: 4000;
-    list-style-type: none;
-    position: fixed;
-    width:100%;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    overflow: hidden;
-    background-color: rgb(212, 199, 199);
-    opacity: 100%;
-    letter-spacing: 1.5px;
-  }
-  
-  ul.header li {
-    float: left;
-  }
-  
-  ul.header li a {
+  z-index: 4000;
+  list-style-type: none;
+  position: fixed;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: rgb(212, 199, 199);
+  opacity: 100%;
+  letter-spacing: 1.5px;
+}
+
+.header.hebrew_menu li{
+  float:right;
+}
+
+ul.header li {
+  float: left;
+}
+ul.header a.icon{
+  display:none;
+}
+
+ul.header li a {
+  display: block;
+  color: rgba(0, 0, 0, 0.66);
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+}
+
+/* define color for active button and hover button */
+ul.header li a.active {
+  background-color: #7AB5B6;
+  color: white;
+}
+
+ul.header li a:hover:not(.active) {
+  background-color: #9FA1BD;
+}
+
+ul.header li.language{
+  float:right;
+}
+.header li.left_object{
+  float:left;
+}
+
+ul.header li.icon{
+  display:none;
+  margin: auto;
+  padding: 9px 16px;
+}
+ul.header li.icon:hover{
+  background-color: #9FA1BD;
+  cursor: pointer; 
+}
+
+ul.header li.icon div{
+  width: 35px;
+  height: 3px;
+  background-color: #575469;
+  margin: 8px auto;
+}
+
+/* additionally I decided to add media query to make header adaptive */
+/* hide menu items for narrow screen */
+@media screen and (max-width: 1024px) {
+  ul.header li:not(:first-child) {display: none;}
+  ul.header li.icon {
+    float: right;
     display: block;
-    color: rgba(0, 0, 0, 0.66);
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
   }
-  
-  /* define color for active button and hover button */
-  ul.header li a.active {
-    background-color: #7AB5B6;
-    color: white;
+  ul.header li.icon.left_object {
+    float: left;
+    display: block;
   }
-  
-  ul.header li a:hover:not(.active) {
-    background-color: #9FA1BD;
   }
+/* define hidden menu style*/
+@media screen and (max-width: 1024px) {
+  ul.header.responsive {
+    /* position: relative; */
+    position: fixed;
+    overflow: hidden;
+
+  }
+
+  .header.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header.responsive li.icon.left_object {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+  }
+
+  ul.header.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

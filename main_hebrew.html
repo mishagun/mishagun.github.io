@@ -10,18 +10,32 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <ul class="header" >
-        <li style="float:right"><a class="active" href="main_hebrew.html">ראשי</a></li>
-        <li style="float:right"><a href="#about">עלינו</a></li>
-        <li style="float:right"><a href="news.html">חדשות</a></li>
-        <li style="float:right"><a href="rules.html">חוקי המשחק</a></li>
-        <li style="float:right"><a href="championship.html">תחרות</a></li>
-        <li style="float:right"><a href="register.html">רשימה</a></li>
-        <li style="float:right"><a href="#contacts">צור קשר</a></li>
-        <li style="float:right"><a style="color:blueviolet" href="rules_with_xml.html">XML</a></li>
-        <li style="float:right"><a style="color:blueviolet"  href="js_task.html">JS</a></li>
-        <li><a href="index.html">EN</a></li>
+    <ul class="header hebrew_menu" id="myheader" >
+        <li><a class="active" href="main_hebrew.html">ראשי</a></li>
+        <li><a href="#about">עלינו</a></li>
+        <li><a href="news.html">חדשות</a></li>
+        <li><a href="rules.html">חוקי המשחק</a></li>
+        <li><a href="championship.html">תחרות</a></li>
+        <li><a href="register.html">רשימה</a></li>
+        <li><a href="#contacts">צור קשר</a></li>
+        <li><a style="color:blueviolet" href="rules_with_xml.html">XML</a></li>
+        <li><a style="color:blueviolet"  href="js_task.html">JS</a></li>
+        <li class="left_object"><a href="index.html">EN</a></li>
+        <li a class="icon left_object"  onclick="menu_function()"><div></div><div></div><div></div></li>
     </ul>
+    <!-- <ul class="header" id="myheader">
+        <li><a class="active" href="#main">MAIN</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="news.html">NEWS</a></li>
+        <li><a href="rules.html">RULES</a></li>
+        <li><a href="championship.html">CHAMPIONSHIP</a></li>
+        <li><a href="register.html">REGISTER</a></li>
+        <li><a href="#contacts">CONTACT US</a></li>
+        <li><a style="color:blueviolet"  href="rules_with_xml.html">XML</a></li>
+        <li><a style="color:blueviolet"  href="js_task.html">JS</a></li>
+        <li class="language"><a href="main_hebrew.html">HE</a></li>
+        <li a class="icon" onclick="menu_function()"><div></div><div></div><div></div></li>
+    </ul> -->
     <div class="landing_image_box" id="main">
         <div class="landing_image"> </div>
         <div class="landing_text">
@@ -56,5 +70,6 @@
               </ul>
         </footer>
     </div>
+    <script src="js/menu_function.js"></script>
 </body>
 </html>

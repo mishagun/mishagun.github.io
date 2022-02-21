@@ -42,7 +42,7 @@ div.landing_image_box {
   font-size:40px;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  top: 50%;
+  top: 350px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -92,9 +92,7 @@ h3.heading_title {
 
 /* define style for boxes and their content to use throughout all the project*/
 div.fieldbox {
-    height:100%;
-    width: 1000px;
-    /* padding-top: 40px; */
+    padding: 0px 30px;
     margin: auto;
     overflow: hidden;
   } 
@@ -121,7 +119,9 @@ div.fieldbox {
 
 
 /* define style for table located within a fieldbox */
-
+.fieldbox table{
+  min-width: 700px;
+}
 .fieldbox table, th, td {
   border: 2px solid black;
   border-collapse: collapse;
@@ -167,8 +167,11 @@ div.fieldbox {
 
 
 /* for field with greyish background */
-div.bg-gray {
+.bg-gray {
   background-color: #e7e6e8;
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
 }
 /* for field with almost black background */
 div.bg-black {

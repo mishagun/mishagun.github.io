@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <ul class="header">
+    <ul class="header" id="myheader">
         <li><a href="index.html">MAIN</a></li>
         <li><a href="index.html#about">ABOUT</a></li>
         <li><a class="active" href="news.html">NEWS</a></li>
@@ -20,7 +20,8 @@
         <li><a href="#contacts">CONTACT US</a></li>
         <li><a style="color:blueviolet"  href="rules_with_xml.html">XML</a></li>
         <li><a style="color:blueviolet"  href="js_task.html">JS</a></li>
-        <li style="float:right"><a href="main_hebrew.html">HE</a></li>
+        <li class="language"><a href="main_hebrew.html">HE</a></li>
+        <li a class="icon" onclick="menu_function()"><div></div><div></div><div></div></li>
     </ul>
     <div class="bg-gray" style="margin-top: 58px;"> <!-- added margin-top there to start after header -->
         <div class="fieldbox">
@@ -93,6 +94,6 @@
                   </ul>
             </footer>
         </div>
-    
+    <script src="js/menu_function.js"></script>
 </body>
 </html>

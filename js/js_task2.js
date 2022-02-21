@@ -14,7 +14,7 @@ function CreateMessageContent(chatname, chatmessagetext, datetime) {
     var img = document.createElement("img");
     img.src= "../media/icons/minus.svg";
 
-    datetime = datetime.toDateString() + " "+ (datetime.toTimeString().substring(0,8));
+    datetime = entries_counter + ". " + datetime.toDateString() + " "+ (datetime.toTimeString().substring(0,8));
     var timestamp = document.createElement("p");
     timestamp.innerHTML = datetime;
     timestamp.setAttribute("class","timestamp");
@@ -27,7 +27,7 @@ function CreateMessageContent(chatname, chatmessagetext, datetime) {
     var chatlogname = document.createElement("a"); 
     chatlogname.setAttribute("id","chatlogname" + entries_counter)
     chatlogname.innerHTML = chatname;
-    chatlogname.href = " ";
+    chatlogname.href = "javascript:void(0);";
 
     // creating message content
     var chatlogmessage = document.createElement("p");

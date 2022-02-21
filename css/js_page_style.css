@@ -8,7 +8,6 @@
     margin-bottom: 30px;
     border-radius: 3px;
     overflow:scroll;
-
 }
 .chatlog p{
     color: #8492A6;
@@ -69,4 +68,8 @@
     padding: 0px;
     display: inline-block;
     vertical-align: middle;
+}
+
+.timestampbox img{
+    cursor: pointer;
 }
