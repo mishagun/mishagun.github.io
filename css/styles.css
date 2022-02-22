@@ -178,19 +178,20 @@ div.bg-black {
   background-color: #1f1e1f;
 }
 
-
-
 /* create two equal column layout to use throughout all the project */
 .two_column_equal {
-  height: 500px;
+  /* height: 500px; */
   float: left;
+  flex-grow: 1;
   width: 50%;
   padding: 15px;
-  position: relative;  /* for aligning image vertically afterwards */
+  margin: 20px;
 }
 .two_column_box{
-  height: auto;
-  display: flex; /* use it only to make vertical line fit content of its parent */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row; 
 }
 /* to change layout back to normal after twocolumn field */
 .two_column_box:after {
@@ -198,15 +199,23 @@ div.bg-black {
   display: table;
   clear: both;
 }
+@media screen and (max-width: 800px) {
+  .two_column_box{
+    flex-direction: column;
+  }
+  .two_column_box img{
+    max-width: 400px;
+  }
+  .two_column_equal{
+    width:100%;
+    align-items: center;
+  }
+}
 
 .two_column_box img.align_to_center{
-  align-items: center;    /* for aligning content in the center of the page*/
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  align-items: center;   /*  for aligning content in the center of the page */
+  max-width: 400px;
+  height: auto;
 }
 
 .two_column_box img.align_with_text{
