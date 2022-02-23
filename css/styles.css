@@ -93,8 +93,6 @@ h3.heading_title {
 /* define style for boxes and their content to use throughout all the project*/
 div.fieldbox {
     padding: 0px 30px;
-    margin: auto;
-    overflow: hidden;
   } 
 .fieldbox p {
     padding-top: 15px;
@@ -180,18 +178,18 @@ div.bg-black {
 
 /* create two equal column layout to use throughout all the project */
 .two_column_equal {
-  /* height: 500px; */
   float: left;
   flex-grow: 1;
-  width: 50%;
   padding: 15px;
-  margin: 20px;
+  margin: 20px auto;
 }
 .two_column_box{
   height: 100%;
+  margin: auto 70px;
   display: flex;
   justify-content: center;
   flex-direction: row; 
+  /* flex-wrap: wrap; */
 }
 /* to change layout back to normal after twocolumn field */
 .two_column_box:after {
@@ -199,18 +197,7 @@ div.bg-black {
   display: table;
   clear: both;
 }
-@media screen and (max-width: 800px) {
-  .two_column_box{
-    flex-direction: column;
-  }
-  .two_column_box img{
-    max-width: 400px;
-  }
-  .two_column_equal{
-    width:100%;
-    align-items: center;
-  }
-}
+
 
 .two_column_box img.align_to_center{
   align-items: center;   /*  for aligning content in the center of the page */
@@ -218,7 +205,7 @@ div.bg-black {
   height: auto;
 }
 
-.two_column_box img.align_with_text{
+img.align_with_text{
   width: 300px;
   height: 200px;
   object-fit: cover;
@@ -231,31 +218,64 @@ div.bg-black {
 /* create left small column */
 .left_small_column {
   float: left;
-  width: 25%;
+  min-width: 100px;
   padding: 15px;
 
+}
+.breakrow{
+  height: 0%;
+  flex:100%;
 }
 
 /* create right big column */
 .right_big_column {
   float: left;
-  width: 74.9%;
+  flex: 1 3 300px;
   padding: 15px;
 }
 
 /* create vertical separation line*/
 .vertical-row {
-  /* float:left; */
   display: inline-block;
   margin-top: 25px;
   margin-bottom: 25px;
-  width: 0.1%; 
+  flex: 0 0.1%; 
   background-color: #58546a70;
  } 
 
+@media screen and (max-width: 1000px) {
+.two_column_box{
+  flex-direction: column;
+}
+.two_column_box img{
+  max-width: 400px;
+}
+.two_column_equal{
+  width:100%;
+  align-items: center;
+}
+.vertical-row {
+  display: none;
+}
+}
 
-
-
-
-
-
+@media screen and (max-width: 600px) {
+  .two_column_box{
+    margin: auto 5px;
+  }
+  .right_big_column {
+    float: none;
+    padding: 0px;
+  }
+  img.align_with_text{
+    float:none;
+    display:block;
+  }
+  .two_column_box div, iframe, img{
+    width: 50vh;
+    margin: auto;
+  }
+  .landing_text{
+    font-size: 25px;
+  }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS task 2</title>
+    <title>JS tasks</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/js_page_style.css">
 </head>
 <body>
-    <ul class="header">
+    <ul class="header" id="myheader">
         <li><a href="index.html">MAIN</a></li>
         <li><a href="index.html#about">ABOUT</a></li>
         <li><a href="news.html">NEWS</a></li>
@@ -22,13 +22,15 @@
         <li><a href="#contacts">CONTACT US</a></li>
         <li><a style="color:blueviolet" href="rules_with_xml.html">XML</a></li>
         <li><a style="color:blueviolet" class="active" href="js_task.html">JS</a></li>
-        <li style="float:right"><a href="main_hebrew.html">HE</a></li>
+        <li class="language"><a href="main_hebrew.html">HE</a></li>
+        <li a class="icon" onclick="menu_function()"><div></div><div></div><div></div></li>
+
     </ul>
 
     <!-- field with general information -->
     <div class="bg-gray" style="margin-top: 58px;  min-height: 75vh;"> <!-- added margin-top there to start after header -->
         <div class="fieldbox">
-            <h2 class="heading_title" style="text-align:center;">Chat</h2>
+            <h2 class="heading_title" style="text-align:center;"> JS Task 2 - Chat (Mikhail Feldman)</h2>
             <p style="text-align: center;">This is a place to freely chat with other vistiors of the website.</p>
             <hr style="margin: 25px; color:#58546a70;">
         </div>
@@ -42,26 +44,22 @@
                 <input type=submit value="SUBMIT" id="submit_main_form" />
             </form>
             <div class="chatlog" id=chatlog>
-            </div>   
-    </div>
-</div>
-      <div id="con">
-            <div> This is a website for people who are interested in the game of squash, feel desire to learn more about the game and want to find people to play it with.</div>
-            <div> The site was created by Mikhail Feldman as part of course Web Design and Development in the </div>
-            <div> department of Information Science at Bar-Ilan University. </div>
-            <div> It is preffered to view this site in Google Chrome browser. </div>
+            </div>
         </div>
-        <div> <button onclick=reverseChildren(con)>Click to change paragraph arid words order</button> </div>
-        <script >
-                function reverseChildren(parent) {
-                    for (var i = 1; i < parent.childNodes.length; i++){
-                        var split = String(parent.childNodes[i].textContent).split(" ").reverse();
-                        parent.childNodes[i].innerHTML = String(split).replaceAll(',',' ');
-                        parent.insertBefore(parent.childNodes[i], parent.firstChild);
-                        
-                    }
-                }
-        </script>	
+        <hr style="margin: 25px; color:#58546a70;">
+        <div class="fieldbox">
+            <h2 class="heading_title" style="text-align:center;">JS Task 6 (Ester Mor Perez)</h2>
+        <div id="con" class="longtext" style="max-width: 800px;">
+                <p style="padding-top:0px;"> This is a website for people who are interested in the game of squash, feel desire to learn more about the game and want to find people to play it with.</p>
+                <p style="padding-top:0px;"> The site was created by Mikhail Feldman and Ester Mor Perez as part of course Web Design and Development in the </p>
+                <p style="padding-top:0px;"> department of Information Science at Bar-Ilan University. </p>
+                <p style="padding-top:0px;"> It is preffered to view this site in Google Chrome browser. </p>
+            </div>
+            <div style="text-align: center;"> 
+                <button class = "taskbutton" onclick=reverseChildren(con)>CLICK TO CHANGE PARAGRAPH AND WORDS ORDER</button> 
+            </div>
+        </div>
+    </div>
     <!-- page footer -->
     <div class="bg-black" id="contacts">
         <footer class="footer">
@@ -75,5 +73,8 @@
         </footer>
     </div>
     <script src="js/js_task2.js"></script>
+    <script src="js/js_task6.js"></script>
+    <script src="js/menu_function.js"></script>
+
 </body>
 </html>
