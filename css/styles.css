@@ -244,19 +244,19 @@ img.align_with_text{
  } 
 
 @media screen and (max-width: 1000px) {
-.two_column_box{
-  flex-direction: column;
-}
-.two_column_box img{
-  max-width: 400px;
-}
-.two_column_equal{
-  width:100%;
-  align-items: center;
-}
-.vertical-row {
-  display: none;
-}
+  .two_column_box{
+    flex-direction: column;
+  }
+  .two_column_box img{
+    max-width: 400px;
+  }
+  .two_column_equal{
+    width:100%;
+    align-items: center;
+  }
+  .vertical-row {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -275,7 +275,7 @@ img.align_with_text{
     width: 50vh;
     margin: auto;
   }
-  .landing_text{
-    font-size: 25px;
+  .landing_text h1{
+    font-size: 40px;
   }
 }
