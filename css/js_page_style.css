@@ -59,9 +59,9 @@
     text-decoration: none;
     cursor: pointer;
 }
-.form1 button:hover, .taskbutton:hover{
+.taskbutton:hover{
     background-color: #619293;
-}
+  }
 
 .timestampbox p, img{
     margin: 0px;
