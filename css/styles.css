@@ -275,7 +275,7 @@ img.align_with_text{
     width: 50vh;
     margin: auto;
   }
-  .two_column_box img{
+  .two_column_box img, iframe{
     max-width: 200px;
   }
   .landing_text h1{
