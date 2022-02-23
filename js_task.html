@@ -45,7 +45,23 @@
             </div>   
     </div>
 </div>
-
+      <div id="con">
+            <div> This is a website for people who are interested in the game of squash, feel desire to learn more about the game and want to find people to play it with.</div>
+            <div> The site was created by Mikhail Feldman as part of course Web Design and Development in the </div>
+            <div> department of Information Science at Bar-Ilan University. </div>
+            <div> It is preffered to view this site in Google Chrome browser. </div>
+        </div>
+        <div> <button onclick=reverseChildren(con)>Click to change paragraph arid words order</button> </div>
+        <script >
+                function reverseChildren(parent) {
+                    for (var i = 1; i < parent.childNodes.length; i++){
+                        var split = String(parent.childNodes[i].textContent).split(" ").reverse();
+                        parent.childNodes[i].innerHTML = String(split).replaceAll(',',' ');
+                        parent.insertBefore(parent.childNodes[i], parent.firstChild);
+                        
+                    }
+                }
+        </script>	
     <!-- page footer -->
     <div class="bg-black" id="contacts">
         <footer class="footer">
