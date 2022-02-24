@@ -178,6 +178,7 @@ div.bg-black {
 
 /* create two equal column layout to use throughout all the project */
 .two_column_equal {
+  display: flexbox;
   float: left;
   flex-grow: 1;
   padding: 15px;
@@ -189,7 +190,6 @@ div.bg-black {
   display: flex;
   justify-content: center;
   flex-direction: row; 
-  /* flex-wrap: wrap; */
 }
 /* to change layout back to normal after twocolumn field */
 .two_column_box:after {
@@ -201,8 +201,7 @@ div.bg-black {
 
 .two_column_box img.align_to_center{
   align-items: center;   /*  for aligning content in the center of the page */
-  max-width: 400px;
-  height: auto;
+  width: 400px;
 }
 
 img.align_with_text{
@@ -218,7 +217,7 @@ img.align_with_text{
 /* create left small column */
 .left_small_column {
   float: left;
-  min-width: 100px;
+  min-width: 220px;
   padding: 15px;
 
 }
