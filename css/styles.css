@@ -271,16 +271,21 @@ img.align_with_text{
     display:block;
   }
   .fieldbox p, h1, h3{
-    width: fit-content;
+    width: 50vh;
   }
   .two_column_box div, iframe, img{
     width: 50vh;
     margin: auto;
   }
   .two_column_box img, iframe{
-    max-width: 200px;
+    max-width: 250px;
   }
   .landing_text h1{
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .fieldbox p, h1, h3{
+    width: 250px;
   }
 }
