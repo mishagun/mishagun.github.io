@@ -271,6 +271,9 @@ img.align_with_text{
     float:none;
     display:block;
   }
+  .fieldbox p, h1, h3{
+    width: fit-content;
+  }
   .two_column_box div, iframe, img{
     width: 50vh;
     margin: auto;
